@@ -59,7 +59,7 @@ def create_rfm_df(df):
 # ==============================
 @st.cache_data
 def load_data():
-    all_df = pd.read_csv("main_data.gz")
+    all_df = pd.read_csv("main_data.zip")
     datetime_cols = ["order_purchase_timestamp", "order_approved_at", "order_delivered_carrier_date", "order_delivered_customer_date", "order_estimated_delivery_date"]
     for col in datetime_cols:
         all_df[col] = pd.to_datetime(all_df[col])
